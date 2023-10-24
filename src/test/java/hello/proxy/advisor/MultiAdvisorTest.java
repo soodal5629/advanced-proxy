@@ -17,7 +17,7 @@ public class MultiAdvisorTest {
 
     @Test
     @DisplayName("여러 프록시")
-    void multiProvisorTest1() {
+    void multiAdvisorTest1() {
         // client -> proxy2(advisor2) -> proxy1(advisor1) -> target
         // 프록시1 생성
         ServiceInterface target = new ServiceImpl();
@@ -39,7 +39,7 @@ public class MultiAdvisorTest {
 
     @Test
     @DisplayName("하나의 프록시, 여러 어드바이저")
-    void multiProvisorTest2() {
+    void multiAdvisorTest2() {
         // client -> proxy -> advisor2 -> advisor1 -> target
         DefaultPointcutAdvisor advisor1 = new DefaultPointcutAdvisor(Pointcut.TRUE, new Advice1());
         DefaultPointcutAdvisor advisor2 = new DefaultPointcutAdvisor(Pointcut.TRUE, new Advice2());
