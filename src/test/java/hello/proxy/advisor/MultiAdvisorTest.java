@@ -47,7 +47,6 @@ public class MultiAdvisorTest {
         ServiceInterface target = new ServiceImpl();
         ProxyFactory proxyFactory1 = new ProxyFactory(target);
 
-
         // ProxyFactory는 Advisor가 필수임 - 여러 어드바이저 넣을 때 순서 중요!(등록하는 순서대로 어드바이저 호출됨)
         proxyFactory1.addAdvisor(advisor2);
         proxyFactory1.addAdvisor(advisor1);
